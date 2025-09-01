@@ -1,3 +1,4 @@
+<!-- what does this do......? -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
@@ -9,11 +10,11 @@
     </head>
 
     <body class="text-center px-8 py-12 text-ssm">
-        <h1>Welcome to the Ninja Network</h1>
+        <h1 class="uppercase font-thin">Welcome To The Ninja's Network</h1>
         <p>Click the button below to view the list of ninjas.</p>
 
-        <a href="/ninjas" class="btn mt-4 inline-block">
-            Find Ninjas!
+        <a href="/ninjas" class="btn mt-4 inline-block font-thin uppercase">
+            Find Ninja!
         </a>
     </body>
 
