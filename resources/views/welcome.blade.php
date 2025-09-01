@@ -1,4 +1,3 @@
-<!-- what does this do......? -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
