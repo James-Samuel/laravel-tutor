@@ -11,17 +11,15 @@
         <h2>Current Available Ninjas</h2>
         <p>{{$greeting}}</p>
 
+        <!-- Blade Directive -->
+
         <ul>
+            @foreach($ninjas as $ninja)
             <li>
-                <a href="/ninjas/{{$ninjas[0]["id"]}}">
-                    {{$ninjas[0]["name"]}}
-                </a>
+                <p>{{ $ninja['name'] }}</p>
+                <a href="/ninjas/{{ $ninja['id'] }}">View Detail</a>
             </li>
-            <li>
-                <a href="/ninjas/{{$ninjas[1]["id"]}}">
-                    {{$ninjas[1]["name"]}}
-                </a>
-            </li>
+         @endforeach
         </ul>
     </body>
 
