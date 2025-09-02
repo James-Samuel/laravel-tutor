@@ -1,3 +1,3 @@
 <x-layout>
-    <h2>Ninja id - {{"$id"}}</h2>
+    <h2 class="uppercase">Ninja id - {{"$id"}}</h2>
 </x-layout>
