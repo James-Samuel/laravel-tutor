@@ -18,6 +18,9 @@ class NinjaFactory extends Factory
     {
         return [
             //
+            'name'=>fake()->name(),
+            'bio'=>fake()->realText(500),
+            'skill'=>fake()->numberBetween(0,100),
         ];
     }
 }
