@@ -8,3 +8,49 @@ How laravel works with database through something call migration......???
 Eloquent model
 In Laravel, an Eloquent model is a PHP class that represents a table in your database and allows you to interact with that table in an object-oriented way instead of writing raw SQL queries.
 Each model corresponds to a single table in the database and provides methods to perform common database operations such as retrieving, inserting, updating, and deleting records.
+
+🏭 Factory
+A Factory in Laravel is used to generate fake data for your models (tables).
+It helps you quickly create test data without typing manually.
+Example: Instead of adding users by hand, a factory can make 50 users in one go.
+
+Example:
+
+// UserFactory.php
+public function definition()
+{
+    return [
+        'name' => fake()->name(),
+        'email' => fake()->unique()->safeEmail(),
+        'password' => bcrypt('password'),
+    ];
+}
+
+
+Then you can run:
+
+User::factory()->count(50)->create();
+
+
+🌱 Seeder
+A Seeder in Laravel is used to insert data into your database.
+It uses factories to create and save records in your database tables.
+You use it when you want initial data (like default users, roles, categories) that your app needs.
+
+Example:
+// DatabaseSeeder.php
+public function run()
+{
+    // Create one admin user
+    User::factory()->create([
+        'name' => 'Admin',
+        'email' => 'admin@example.com',
+    ]);
+}
+
+🔑 Difference Between Them
+Factory → Defines how fake data looks (the blueprint).
+Seeder → Uses factories (or raw insert) to actually put data into the database.
+👉 Think of it like this:
+Factory = recipe 🍰
+Seeder = the chef that uses the recipe to cook and put food on the table 🍽️
