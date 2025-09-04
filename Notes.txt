@@ -54,3 +54,9 @@ Seeder → Uses factories (or raw insert) to actually put data into the database
 👉 Think of it like this:
 Factory = recipe 🍰
 Seeder = the chef that uses the recipe to cook and put food on the table 🍽️
+
+MVC(Model, View, Controller)
+Model → Represents the data and business logic (like User, Post).
+View → Displays the data to the user (like a webpage).
+Controller → Handles user input and interacts with the model and view (like a webpage controller).
+In Laravel, you often use Eloquent models to represent your data (Model), Blade templates for your views (View), and controller classes to handle requests (Controller).

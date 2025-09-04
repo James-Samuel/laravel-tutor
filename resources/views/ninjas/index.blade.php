@@ -1,6 +1,5 @@
 <x-layout>
     <h2>Current Available Ninjas</h2>
-    <p>{{$greeting}}</p>
 
     <!-- Blade Directive -->
 
