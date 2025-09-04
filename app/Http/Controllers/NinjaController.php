@@ -17,10 +17,13 @@ class NinjaController extends Controller
     public function show($id){
         //route --> /ninjas/{id}
         //fetch a single record and pass int show view
+        $ninja = Ninja::findOrFail($id);
+        return view('ninjas.show', ["ninja"=>$ninja]);
     }
     public function create(){
         //route --> /ninjas/create
         //render a create view(with web form) to user
+        return view('ninjas.create');
     }
     public function store(){
         //---> /ninjas/ (POST)
