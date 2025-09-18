@@ -12,4 +12,8 @@
         </li>
         @endforeach
     </ul>
+
+    <div>
+        {{$ninjas->links()}}
+    </div>
 </x-layout>
