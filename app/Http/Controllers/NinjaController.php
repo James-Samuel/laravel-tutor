@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Ninja;
+use App\Models\Dojo;
+
 class NinjaController extends Controller
 {
     //
@@ -17,6 +19,8 @@ class NinjaController extends Controller
         $ninjasList = Ninja::with('dojo')->orderBy('created_at','desc')->paginate(10);
         return view('ninjas.index',["ninjas"=> $ninjasList]);
     }
+
+
     public function show($id){
         //route --> /ninjas/{id}
         //fetch a single record and pass int show view
@@ -25,10 +29,12 @@ class NinjaController extends Controller
         $ninja = Ninja::with('dojo')->findOrfail($id);
         return view('ninjas.show', ["ninja"=>$ninja]);
     }
+
     public function create(){
         //route --> /ninjas/create
         //render a create view(with web form) to user
-        return view('ninjas.create');
+        $dojos = Dojo::all();
+        return view('ninjas.create',["dojos"=>$dojos]);
     }
     public function store(){
         //---> /ninjas/ (POST)
