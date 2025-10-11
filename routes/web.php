@@ -15,6 +15,15 @@ Route::get('/ninjas', function () {
     return view('ninjas.index',["greeting"=>"hello", "ninjas"=> $ninjasList]); // do not put $ninjasList in " "
 });
 
+
+
+
+Route::get('/ninjas/create', function () {
+    return view('ninjas.create');
+});
+
+
+
 // Route wilcards
 
 Route::get('/ninjas/{id}', function ($id) {
