@@ -8,3 +8,6 @@ How laravel works with database through something call migration......???
 Eloquent model
 In Laravel, an Eloquent model is a PHP class that represents a table in your database and allows you to interact with that table in an object-oriented way instead of writing raw SQL queries.
 Each model corresponds to a single table in the database and provides methods to perform common database operations such as retrieving, inserting, updating, and deleting records.
+
+****09
+>php artisan make:model Ninja -mfs
