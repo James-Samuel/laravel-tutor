@@ -1,0 +1,26 @@
+Passing html attributes to laravel components, how to pass  a custom attribute something which doesn't exist on any HTML element..........??
+
+How laravel works with database through something call migration......???
+
+
+
+***08
+Database migration
+>php artisan make:migration create_todos_table
+{
+    Schema::create('todos', function (Blueprint $table) {
+        $table->id();
+        $table->timestamps(); //created_at & updated_at
+    });
+}
+
+>php artisan migrate
+{
+    Schema::create('todos', function (Blueprint $table) {
+        $table->id();
+        $table->timestamps(); //created_at & updated_at
+        $table->string('title');
+        $table->boolean('is_complete');
+    });
+}
+>php artisan migrate:rollback
