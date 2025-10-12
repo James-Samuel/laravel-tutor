@@ -1,5 +1,9 @@
-<div class="card">
+@props(['highlight'=>false])
+
+<div @class(['highlight'=>$highlight, 'card'])>
+
     {{$slot}}
+
     <!-- passing href attributes  -->
     <!-- <a href="{{$attributes->get('href')}}" class="btn uppercase text-sm">View Details</a> -->
     <!-- easy way to pass href attribute -->
